@@ -1,8 +1,18 @@
 package de.jenny;
 import java.io.*;
 
+
+/**
+ * @brief the app class
+ * @author jenny
+ *
+ */
 public class App 
 {
+	/**
+	 * 
+	 * @param args
+	 */
     public static void main( String[] args )
     {
     	 try {
