@@ -6,8 +6,8 @@ import static org.junit.Assert.*;
 public class TestUtil
 {
 	@Test
-	public static void TestistErstesHalbjahr(int monat)
+	public static void TestistErstesHalbjahr()
 	{	
-		
+		assertTrue(true);
 	}
 }
