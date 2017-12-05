@@ -8,17 +8,39 @@ import static org.junit.Assert.*;
 
 public class TestQueue 
 {	
-	Queue testQueue = new Queue(3);
+	
 	@Test
-	public void enqueue()
+	public void enqueueDequeue()
 	{
-		for(int i =0; i<= ; i++)
+		Queue testQueue = new Queue(3);
+		int tmp1 =1;
+		int tmp2 = 0;
+		testQueue.enqueue(1);
+		tmp2 = testQueue.dequeue();
+		try{
+			assertEquals(tmp1, tmp2);
+		}catch(Exception e)
 		{
-			
+			System.err.println("Error: " + e);
 		}
-		testQueue.enqueue(2);
-		assertTrue(true);
- 
-	}
 		
+	}
+	@Test(expected=IllegalStateException.class)
+	public void dequeue()
+	{
+		Queue testQueue = new Queue(3);
+			testQueue.dequeue();
+	}
+	
+	@Test
+	public void eineRundeRum()
+	{
+		Queue testQueue = new Queue(2);
+		testQueue.enqueue(0);
+		testQueue.enqueue(1);
+		testQueue.enqueue(2);
+		testQueue.enqueue(3);
+		int tmp1 =2;
+		int tmp2 = ;
+	}
 }

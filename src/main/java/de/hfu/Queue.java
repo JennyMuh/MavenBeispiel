@@ -1,10 +1,10 @@
 package de.hfu;
 
 public class Queue {
-   int[] queue;
-   int head;
-   int tail;
-   private final int maxqueuelength;
+   public int[] queue;
+   public int head;
+   public int tail;
+   public final int maxqueuelength;
 
    public Queue(int max){
 	   if (max < 1) throw new IllegalArgumentException("Queue Arraylength " + max);
