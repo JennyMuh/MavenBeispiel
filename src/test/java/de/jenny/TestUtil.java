@@ -1,10 +1,14 @@
 package de.jenny;
-import junit.framework.*;
 
-public class TestUtil extends TestCase
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class TestUtil
 {
+	@Test
 	public static void TestistErstesHalbjahr(int monat)
 	{	
-		
+		final int eingabe =3;
+		assertTrue(true);
 	}
 }
