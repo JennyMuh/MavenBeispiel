@@ -21,8 +21,8 @@ public class App
     	       while ((thisLine = br.readLine()) != null) 
     	       {
     	         System.out.println(thisLine.toUpperCase());
-    	       } // end while 
-    	     } // end try
+    	       } 
+    	     } 
     	     catch (IOException e) {
     	       System.err.println("Error: " + e);
     	     }

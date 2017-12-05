@@ -12,7 +12,11 @@ public class TestQueue
 	@Test
 	public void enqueue()
 	{
-		
+		for(int i =0; i<= ; i++)
+		{
+			
+		}
+		testQueue.enqueue(2);
 		assertTrue(true);
  
 	}
