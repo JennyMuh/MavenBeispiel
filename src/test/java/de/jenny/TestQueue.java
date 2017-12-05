@@ -6,12 +6,15 @@ import de.hfu.Queue;
 
 import static org.junit.Assert.*;
 
-public class TestQueue {
-	
+public class TestQueue 
+{	
+	Queue testQueue = new Queue(3);
 	@Test
-	public void Testenqueue()
+	public void enqueue()
 	{
+		
 		assertTrue(true);
+ 
 	}
-
+		
 }
