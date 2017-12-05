@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class TestUtil
 {
-	@Test (expected=IllegalArgumentException.class)
+	@Test
 	public void TestistErstesHalbjahr()
 	{	
 		for (int i = 1; i <=12; i++)
