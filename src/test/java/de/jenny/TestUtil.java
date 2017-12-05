@@ -9,8 +9,16 @@ import static org.junit.Assert.*;
 public class TestUtil
 {
 	@Test (expected=IllegalArgumentException.class)
-	public static void TestistErstesHalbjahr(int monat)
+	public void TestistErstesHalbjahr()
 	{	
-		Util.istErstesHalbjahr(3);
+		for (int i = 1; i <=12; i++)
+		{
+		   if (i <= 6)
+		       assertTrue(Util.istErstesHalbjahr(i));
+		   else
+		   {
+			assertFalse(Util.istErstesHalbjahr(i));
+		   }
+		}
 	}
 }
