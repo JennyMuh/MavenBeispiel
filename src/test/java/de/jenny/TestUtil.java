@@ -8,6 +8,6 @@ public class TestUtil
 	@Test
 	public static void TestistErstesHalbjahr(int monat)
 	{	
-		assertTrue(true);
+		
 	}
 }

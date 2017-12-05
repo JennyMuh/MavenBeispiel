@@ -6,9 +6,9 @@ import static org.junit.Assert.*;
 public class TestQueue {
 	
 	@Test
-	public void enqueue(int a)
+	public void enqueue()
 	{
-	
+		assertTrue(true);
 	}
 
 }
