@@ -1,13 +1,16 @@
 package de.jenny;
 
 import org.junit.Test;
+
+import de.hfu.Util;
+
 import static org.junit.Assert.*;
 
 public class TestUtil
 {
-	@Test
-	public static void TestistErstesHalbjahr()
+	@Test (expected=IllegalArgumentException.class)
+	public static void TestistErstesHalbjahr(int monat)
 	{	
-		assertTrue(true);
+		Util.istErstesHalbjahr(3);
 	}
 }
