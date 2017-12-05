@@ -5,6 +5,6 @@ public class TestUtil extends TestCase
 {
 	public static void TestistErstesHalbjahr(int monat)
 	{	
-		assertTrue (true);
+		
 	}
 }
