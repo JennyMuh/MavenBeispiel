@@ -39,8 +39,7 @@ public class TestQueue
 		testQueue.enqueue(0);
 		testQueue.enqueue(1);
 		testQueue.enqueue(2);
-		testQueue.enqueue(3);
-		int tmp1 =2;
-		int tmp2 = ;
+		assertEquals(0,testQueue.dequeue());
+		assertEquals(2,testQueue.dequeue());
 	}
 }
