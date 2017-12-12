@@ -13,10 +13,10 @@ public class ResidentRepositoryStub implements ResidentRepository {
 		
 		List<Resident> list1 = new ArrayList<Resident>();
 		list1.add(0, new Resident("Harald","Muetze","Hauptstrasse","Muenster",new Date(111990)));
-		list1.add(0, new Resident("Hans","Mutz","Gasse","Berlin",new Date(221990)));
-		list1.add(0, new Resident("Harald","Muetze","Hauptstrasse","Konstanz",new Date(12345678)));
-		list1.add(0, new Resident("Isolde","Lala","Am Peer","Hamburg",new Date(111990)));
-		list1.add(0, new Resident("Gerhard","Furtwaengler","Allmendstrasse","Furtwangen",new Date(23456789)));
+		list1.add(1, new Resident("Hans","Mutz","Gasse","Berlin",new Date(221990)));
+		list1.add(2, new Resident("Harald","Muetze","Hauptstrasse","Konstanz",new Date(12345678)));
+		list1.add(3, new Resident("Isolde","Lala","Am Peer","Hamburg",new Date(111990)));
+		list1.add(4, new Resident("Gerhard","Furtwaengler","Allmendstrasse","Furtwangen",new Date(23456789)));
 		
 		return list1;
 	}
