@@ -7,6 +7,8 @@ import java.util.List;
 import org.junit.Test;
 
 import de.hs_furtwangen.informatik.meldeauskunft.domain.Resident;
+import de.hs_furtwangen.informatik.meldeauskunft.service.BaseResidentService;
+import de.hs_furtwangen.informatik.meldeauskunft.service.ResidentServiceException;
 
 public class ResidentServiceEasyMock {
 	@Test
@@ -19,8 +21,7 @@ public class ResidentServiceEasyMock {
 		list1.add(0, new Resident("Isolde","Lala","Am Peer","Hamburg",new Date(111990)));
 		list1.add(0, new Resident("Gerhard","Furtwaengler","Allmendstrasse","Furtwangen",new Date(23456789)));
 		
-		
-		
+		BaseResidentService baseResidentMock = createMock (BaseResidentService.class);
 	}
 
 }
