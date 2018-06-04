@@ -1,14 +1,12 @@
 package integrationTest;
 
-import static org.junit.Assert.*;
 
 import java.util.List;
-
-import org.junit.Test;
-
 import de.hs_furtwangen.informatik.meldeauskunft.domain.Resident;
 import de.hs_furtwangen.informatik.meldeauskunft.service.BaseResidentService;
 import de.hs_furtwangen.informatik.meldeauskunft.service.ResidentServiceException;
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.fail;
 
 public class ResidentServiceIntegrationTest 
 {

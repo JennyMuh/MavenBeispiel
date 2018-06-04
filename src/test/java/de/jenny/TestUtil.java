@@ -1,10 +1,11 @@
 package de.jenny;
 
-import org.junit.Test;
 
 import de.hfu.Util;
 
-import static org.junit.Assert.*;
+import static junit.framework.Assert.assertFalse;
+import static junit.framework.Assert.assertTrue;
+
 
 public class TestUtil
 {
