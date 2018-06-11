@@ -1,6 +1,7 @@
 package integrationTest;
 import de.hs_furtwangen.informatik.meldeauskunft.domain.Resident;
 import de.hs_furtwangen.informatik.meldeauskunft.repository.ResidentRepository;
+import de.hs_furtwangen.informatik.meldeauskunft.service.BaseResidentService;
 import de.hs_furtwangen.informatik.meldeauskunft.service.ResidentService;
 import de.hs_furtwangen.informatik.meldeauskunft.service.ResidentServiceException;
 import org.easymock.EasyMock;
@@ -9,7 +10,9 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+import static junit.framework.Assert.assertEquals;
 import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.verify;
 
 public class ResidentServiceEasyMock
 {
@@ -26,5 +29,12 @@ public class ResidentServiceEasyMock
 		ResidentRepository mock = EasyMock.createMock(ResidentRepository.class);
 		EasyMock.expect(mock.getResidents()).andReturn(list1);
 		replay(mock);
+
+		BaseResidentService b1 = new BaseResidentService();
+		b1.setResidentRepository(mock);
+		List<Resident> tmp = b1.getFilteredResidentsList(new Resident("Harald",null,null,null,null));
+		assertEquals(2, tmp.size());
+
+		verify(mock);
 	}
 }

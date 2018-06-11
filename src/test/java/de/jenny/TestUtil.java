@@ -11,7 +11,7 @@ import static junit.framework.Assert.assertTrue;
 public class TestUtil
 {
 	@Test
-	private void TestistErstesHalbjahr()
+	public void TestistErstesHalbjahr()
 	{	
 		for (int i = 1; i <=12; i++)
 		{
