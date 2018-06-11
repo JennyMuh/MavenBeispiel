@@ -1,10 +1,11 @@
 package integrationTest;
-
-
 import java.util.List;
 import de.hs_furtwangen.informatik.meldeauskunft.domain.Resident;
 import de.hs_furtwangen.informatik.meldeauskunft.service.BaseResidentService;
 import de.hs_furtwangen.informatik.meldeauskunft.service.ResidentServiceException;
+import org.junit.Test;
+
+
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.fail;
 
@@ -34,7 +35,7 @@ public class ResidentServiceIntegrationTest
 		List<Resident> tmp = b1.getFilteredResidentsList(new Resident(null,null,"Hauptstrasse",null,null));
 		assertEquals(2, tmp.size());
 	}
-	
+
 	@Test
 	public void getFilteredResidentsListSimpleEmpty()
 	{
@@ -43,7 +44,7 @@ public class ResidentServiceIntegrationTest
 		List<Resident> tmp = b1.getFilteredResidentsList(new Resident(null,null,null,null,null));
 		assertEquals(5, tmp.size());
 	}
-	
+
 	@Test
 	public void getUniqueResidentNotExist()
 	{
@@ -75,14 +76,13 @@ public class ResidentServiceIntegrationTest
 	{
 		BaseResidentService b1 = new BaseResidentService();
 		b1.setResidentRepository(new ResidentRepositoryStub());
-		try {
+		try
+		{
 			Resident tmp = b1.getUniqueResident(new Resident ("Isolde",null,null,null,null));
-			
+
 		} catch (ResidentServiceException e) 
 		{
-			
 			fail();
 		}
 	}
-
 }

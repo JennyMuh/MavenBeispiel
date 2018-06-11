@@ -7,8 +7,7 @@ import de.hfu.Queue;
 import static org.junit.Assert.*;
 
 public class TestQueue 
-{	
-	
+{
 	@Test
 	public void enqueueDequeue()
 	{
@@ -25,6 +24,7 @@ public class TestQueue
 		}
 		
 	}
+
 	@Test(expected=IllegalStateException.class)
 	public void dequeue()
 	{

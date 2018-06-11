@@ -1,16 +1,18 @@
 package integrationTest;
-
+import de.hs_furtwangen.informatik.meldeauskunft.domain.Resident;
+import de.hs_furtwangen.informatik.meldeauskunft.repository.ResidentRepository;
+import de.hs_furtwangen.informatik.meldeauskunft.service.ResidentService;
+import de.hs_furtwangen.informatik.meldeauskunft.service.ResidentServiceException;
+import org.easymock.EasyMock;
+import org.junit.Test;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
+import static org.easymock.EasyMock.replay;
 
-import de.hs_furtwangen.informatik.meldeauskunft.domain.Resident;
-import de.hs_furtwangen.informatik.meldeauskunft.service.BaseResidentService;
-import de.hs_furtwangen.informatik.meldeauskunft.service.ResidentServiceException;
-
-public class ResidentServiceEasyMock {
+public class ResidentServiceEasyMock
+{
 	@Test
 	public void test()
 	{
@@ -20,10 +22,9 @@ public class ResidentServiceEasyMock {
 		list1.add(2, new Resident("Harald","Muetze","Hauptstrasse","Konstanz",new Date(12345678)));
 		list1.add(3, new Resident("Isolde","Lala","Am Peer","Hamburg",new Date(111990)));
 		list1.add(4, new Resident("Gerhard","Furtwaengler","Allmendstrasse","Furtwangen",new Date(23456789)));
-		
-		BaseResidentService baseResidentMock = createMock(BaseResidentService.class);
-		expect(baseResidentMock.getFilteredResidentsList("Ha").andReturn());
-		expect(baseResidentMock.getFilteredResidentsList("Harald"));
-		
+
+		ResidentRepository mock = EasyMock.createMock(ResidentRepository.class);
+		EasyMock.expect(mock.getResidents()).andReturn(list1);
+		replay(mock);
 	}
 }
